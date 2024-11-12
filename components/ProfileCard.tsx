@@ -12,7 +12,7 @@ const ProfileCard = ({
   podcastData,
   imageUrl,
   userFirstName,
-}: any) => {
+}:ProfileCardProps) => {
   const { setAudio } = useAudio();
 
   const [randomPodcast, setRandomPodcast] = useState<PodcastProps | null>(null);

@@ -9,9 +9,9 @@ import { api } from '@/convex/_generated/api'
 
 import { v4 as uuidv4 } from 'uuid';
 import { useAction, useMutation } from 'convex/react'
-import { generateUploadUrl } from '@/convex/files'
+
 import {useUploadFiles} from "@xixixao/uploadstuff/react"
-import { Toast } from './ui/toast'
+
 import { useToast } from '@/hooks/use-toast'
 const useGeneratePodcast=({setAudio,voiceType,voicePrompt,setAudioStorageId}:GeneratePodcastProps)=>{
   const [isGenerating,setIsGenerating]=useState(false)
@@ -24,7 +24,7 @@ const useGeneratePodcast=({setAudio,voiceType,voicePrompt,setAudioStorageId}:Gen
     setIsGenerating(true)
     setAudio('')
     if(!voicePrompt){ 
-      toast:({
+      toast({
         title:"failed"
       })
       return setIsGenerating(false)

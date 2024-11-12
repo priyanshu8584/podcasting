@@ -74,7 +74,7 @@ const {toast}=useToast();
     setIsSubmitting(false)
     throw new Error('no audio or image')
    }
-   const podcast=await createPodcast({
+  await createPodcast({
     podcastTitle: data.podcastTitle,
     podcastDescription: data.podcastDescription,
     audioUrl,

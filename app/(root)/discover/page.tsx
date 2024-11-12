@@ -23,10 +23,10 @@ const Discover = ({searchParams:{search}}:{searchParams:{search:string}}) => {
           <>
           {podcastData.length>0?(
            <div className="podcast_grid">
-           {podcastData?.map(({ _id, podcastTitle, podcastDescription, imageUrl }:any) => (
+           {podcastData?.map(({ _id, podcastTitle, podcastDescription, imageUrl }) => (
              <PodcastCard 
                key={_id}
-               imgUrl={imageUrl}
+               imgUrl={imageUrl!}
                title={podcastTitle}
                description={podcastDescription}
                podcastId={_id}

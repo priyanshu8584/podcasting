@@ -31,9 +31,10 @@ const ProfilePage = ({
       </h1>
       <div className="mt-6 flex flex-col gap-6 max-md:items-center md:flex-row">
         <ProfileCard
-          podcastData={podcastsData!}
-          imageUrl={user?.imageUrl!}
-          userFirstName={user?.name!}
+        //@ts-ignore
+         podcastData={podcastsData!}
+         imageUrl={user?.imageUrl!}
+         userFirstName={user?.name!}
         />
       </div>
       <section className="mt-9 flex flex-col gap-5">
